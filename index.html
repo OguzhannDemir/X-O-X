@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tic-Tac-Toe</title>
+  </head>
+  <body>
+    <div
+      class="container"
+      role="application"
+      aria-label="Tic-Tac-Toe oyun Alanı"
+    >
+      <header>
+        <h1>Tic-Tac-Toe</h1>
+        <div class="controls">
+          <select id="mode" title="Oyun modu">
+            <option value="pvp">2 Oyuncu</option>
+            <option value="pvc">Bilgisayara Karşı</option>
+          </select>
+          <button id="restart">Yeniden Başlat</button>
+        </div>
+      </header>
+      <div class="info">
+        <div>Şu an: <strong id="turnLabel">X</strong></div>
+        <div class="score">
+          <div>X: <span id="scoreX">0</span></div>
+          <div>0: <span id="scoreO">0</span></div>
+          <div>Berabere: <span id="scoreD">0</span></div>
+        </div>
+      </div>
+      <div class="board" id="board" aria-live="polite" role="grid"></div>
+      <div id="message" class="footer">
+        Oyuna Başlamak için bir Hücreye <b>Tıklayın</b>
+      </div>
+      <div id="winLine" class="line" style="display: none"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
